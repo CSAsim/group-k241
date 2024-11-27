@@ -1,8 +1,6 @@
 package lessons;
 
 import java.util.Arrays;
-import java.util.Locale;
-import java.util.stream.IntStream;
 
 public class StringMethods {
 
@@ -43,5 +41,54 @@ public class StringMethods {
         boolean result3 = str.equalsIgnoreCase(str2); //beraberliyini yoxlayir ama simvola duyarli deyil
         System.out.println(result3);
 
+
+        /************************************************************************/
+
+        //Lesson 6
+
+        int br; //default qiymeti 0-dir
+        final int armud = 9; //constant
+
+        //content - String class-nin tipinde yaradilan bir deyisendir
+        String testString = "       Hello, World        "; //112
+//        testString = "afwefw"; //114
+
+        //immutable
+        String subString = testString.substring(5, 11);
+        System.out.println(subString);
+
+        System.out.println("Trim function: " + testString.trim());//Onden ve arxadan bosluqlari silir
+
+        String [] arr = testString.split("llo");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+        }
+
+        String test = "Java Programming";
+        int ind = test.indexOf("mm"); //-1 sehv
+        System.out.println(ind);
+
+        int ind2 = test.indexOf(97);
+        System.out.println(ind2);
+
+        String replacedStr = test.replace('a','3');
+        System.out.println(replacedStr);
+
+        String replacedStr2 = test.replaceAll("Java", "Test");
+        System.out.println(replacedStr2);
+
+        String new_content = testString.concat("ssss");
+        System.out.println(new_content);
+
+        char [] chars = testString.toCharArray();
+        System.out.println(Arrays.toString(chars));
+
+
+        //String Pool
+        String str1 = "Hello";
+        String str3 = "Hello";
+        String str5 = "hello";
+
+        System.out.println(str1.equals(str3));//true
     }
 }
