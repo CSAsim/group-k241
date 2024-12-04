@@ -42,6 +42,7 @@ public class StringMethods {
         System.out.println(result3);
 
 
+        //hello hello ->+1
         /************************************************************************/
 
         //Lesson 6
