@@ -1,4 +1,4 @@
-package oop;
+package module_2;
 
 import java.util.Objects;
 

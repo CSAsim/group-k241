@@ -1,6 +1,4 @@
-package lessons;
-
-import java.util.Random;
+package module_1;
 
 public class Lesson_5 {
 

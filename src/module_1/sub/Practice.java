@@ -1,4 +1,4 @@
-package lessons.sub;
+package module_1.sub;
 
 public class Practice {
 
