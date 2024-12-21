@@ -2,41 +2,48 @@ package module_2_oop;
 
 public class Animal {
 
-    //fields -> properties -> variables
-    //instance -> object
-    public String name;
-    public int age;
-    public String color;
-    public long distance;
+    private String specie;
+    private int age;
+    private String color;
+    public static int objectCount = 0;
 
-    //class variables
-    public static long tail;
+    public Animal() { //default constructor
+        objectCount++;
+    }
 
-    //constructors
-    public Animal(){}
-
-    public Animal(String name, int age, String color, long distance) {
-        this.name = name;
-        this.age = age;
+    //1. Hell yolu - Constructor-la deyer menimsetme
+    public Animal(String specie, int age, String color) {
         this.color = color;
-        this.distance = distance;
+        this.specie = specie;
+        this.age = age;
+    }
+
+    //2. hell yolu - Encapsulation)
+    public void setSpecie(String specie) {
+        this.specie = specie;
+    }
+
+    public String getSpecie() {
+        return specie;
+    }
+
+    public void setAge(int age) {
+        this.age = age; //this("Doberman", 11, "dddd")
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    public String getColor() {
+        return color;
     }
 
 
-    //behaviors -> instance methods
-    public void eat() {
-        System.out.println(name + " is eating");
-    }
-
-    public void run() {
-        System.out.println(name + " is running");
-    }
-
-
-    //class method
-    public static void drink() {
-        System.out.println("Animal is drinking");
+    public static void getObjectCount() {
+        System.out.println(objectCount);
     }
 }
-
-//Access modifiers - public, private, protected, default
